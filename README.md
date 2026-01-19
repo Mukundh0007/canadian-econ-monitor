@@ -51,7 +51,7 @@ For a **zero-configuration** setup, use the provided automation script. This wil
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/your-username/canadian-econ-monitor.git
+    git clone https://github.com/Mukundh0007/canadian-econ-monitor.git
     cd canadian-econ-monitor
     ```
 
@@ -118,10 +118,10 @@ canadian-econ-monitor/
 
 This project uses open data provided by Statistics Canada under the Open Government Licence - Canada.
 
-*   **Consumer Price Index**: Statistics Canada. Table 18-10-0004-01 Consumer Price Index, monthly, not seasonally adjusted.
-    *   DOI: [https://doi.org/10.25318/1810000401-eng](https://doi.org/10.25318/1810000401-eng)
-*   **Retail Trade Sales**: Statistics Canada. Table 20-10-0008-01 Retail trade sales by province and territory (x 1,000).
-    *   DOI: [https://doi.org/10.25318/2010000801-eng](https://doi.org/10.25318/2010000801-eng)
+* **Consumer Price Index**: Statistics Canada. Table 18-10-0004-01 Consumer Price Index, monthly, not seasonally adjusted.
+  * DOI: [https://doi.org/10.25318/1810000401-eng](https://doi.org/10.25318/1810000401-eng)
+* **Retail Trade Sales**: Statistics Canada. Table 20-10-0008-01 Retail trade sales by province and territory (x 1,000).
+  * DOI: [https://doi.org/10.25318/2010000801-eng](https://doi.org/10.25318/2010000801-eng)
 
 ---
 *Built using [Antigravity](https://antigravity.google/)*
