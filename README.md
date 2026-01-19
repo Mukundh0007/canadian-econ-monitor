@@ -1,6 +1,6 @@
 # Canadian Inflation & Recession Monitor 🇨🇦
 
-![Status](https://img.shields.io/badge/Status-Deployed-success?style=for-the-badge) ![Python](https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge) ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Complete-success?style=for-the-badge) ![Python](https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge) ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?style=for-the-badge)
 
 ## 📊 Executive Summary
 
