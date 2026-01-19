@@ -124,4 +124,4 @@ This project uses open data provided by Statistics Canada under the Open Governm
   * DOI: [https://doi.org/10.25318/2010000801-eng](https://doi.org/10.25318/2010000801-eng)
 
 ---
-*Built using [Antigravity](https://antigravity.google/)*
+*Assisted by [Antigravity](https://antigravity.google/)*
