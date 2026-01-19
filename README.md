@@ -97,6 +97,12 @@ For a **zero-configuration** setup, use the provided automation script. This wil
     uv run streamlit run streamlit_app/app.py
     ```
 
+## ☁️ Deployment Note
+
+This project is architected for **Local Execution** (Docker/Localhost) to ensure data privacy and zero-cost operation.
+
+While the stack (Streamlit + MySQL) is cloud-ready, the current configuration is optimized for a local portfolio demonstration. To deploy this publicly, you would simply migrate the MySQL container to a managed cloud database (e.g., AWS RDS, TiDB) and host the frontend on Streamlit Community Cloud.
+
 ## 📂 Project Structure
 
 ```text
