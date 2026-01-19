@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: dsproject_db
+    platform: linux/amd64
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: canadian_finance
+      MYSQL_USER: ds_user
+      MYSQL_PASSWORD: ds_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword" ]
+      timeout: 20s
+      retries: 10
+      interval: 5s
+
+  etl:
+    build: .
+    container_name: dsproject_etl
+    command: python etl/loaders/main_loader.py
+    environment:
+      - DB_HOST=db
+      - DB_USER=ds_user
+      - DB_PASSWORD=ds_password
+      - DB_NAME=canadian_finance
+    depends_on:
+      db:
+        condition: service_healthy
+
+  dashboard:
+    build: .
+    container_name: dsproject_dashboard
+    command: streamlit run streamlit_app/app.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    environment:
+      - DB_HOST=db
+      - DB_USER=ds_user
+      - DB_PASSWORD=ds_password
+      - DB_NAME=canadian_finance
+    depends_on:
+      db:
+        condition: service_healthy
+      etl:
+        condition: service_completed_successfully
+
+volumes:
+  db_data:
